@@ -75,7 +75,6 @@ namespace anpi {
             else *x = Csub(*x, RCmul(frac[iter / MT], dx));
         }
         nrerror("too many iterations in laguer");
-
         return std::numeric_limits<T>::quiet_NaN();
     }
 }
