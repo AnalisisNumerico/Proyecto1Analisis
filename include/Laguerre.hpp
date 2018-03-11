@@ -17,6 +17,12 @@
 #define MT 10
 #define MAXIT (MT*MR)
 
+//Here EPSS is the estimated fractional roundoff error. We try to break (rare) limit cycles with MR
+//different fractional values, once every MT steps, for MAXIT total allowed iterations.
+
+#include <boost/test/unit_test.hpp>
+#include <boost/math/tools/polynomial.hpp>
+
 namespace anpi {
 
     /**
@@ -32,9 +38,11 @@ namespace anpi {
      * @param m es el grado del polinomio
      */
     template<typename T>
-    void <T> laguer(fcomplex a[], int m, fcomplex *x) {
+
+    T laguer(const boost::math::tools::polynomial<T>& a, std::complex<T> *x) {
+        int m = a.degree();
         float abx, abp, abm, err;
-        fcomplex dx, x1, b, d, f, g, h, sq, gp, gm, g2;
+        std::complex<T> dx, x1, b, d, f, g, h, sq, gp, gm, g2;
         static float frac[MR + 1] = {0.0, 0.5, 0.25, 0.75, 0.13, 0.38, 0.62, 0.88, 1.0};
         for (int iter = 1; iter<= MAXIT; iter++) {
             b = a[m];
@@ -68,7 +76,7 @@ namespace anpi {
         }
         nrerror("too many iterations in laguer");
 
-        return;
+        return std::numeric_limits<T>::quiet_NaN();
     }
 }
 
