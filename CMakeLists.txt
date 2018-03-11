@@ -1,7 +1,11 @@
-cmake_minimum_required(VERSION 3.6)
-project(Proyecto1Analisis)
+cmake_minimum_required(VERSION 3.5)
 
-set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp)
-add_executable(Proyecto1Analisis ${SOURCE_FILES})
+project(Proyecto1Analisis VERSION 0.0.0 LANGUAGES CXX)
+
+
+add_subdirectory (src)
+
+enable_testing ()
+add_subdirectory (test)
+add_subdirectory(benchmarks)
