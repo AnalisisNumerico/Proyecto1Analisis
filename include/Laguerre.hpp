@@ -23,9 +23,9 @@
 #include <boost/test/unit_test.hpp>
 #include <boost/math/tools/polynomial.hpp>
 
-namespace anpi {
+namespace anpi {/*
 
-    /**
+
      * The following routine implements the Laguerre method to find one root of a given polynomial of degree m,
      * whose coefficients can be complex. As usual, the first coefficient a[0] is the constant term, while a[m]
      * is the coefficient of the highest power of x. The routine implements a simplified version of an elegant
@@ -36,7 +36,7 @@ namespace anpi {
      * @Author: Gabriel Espinoza
      * @Date  : 10.03.2018
      * @param m es el grado del polinomio
-     */
+
     template<typename T>
 
     T laguer(const boost::math::tools::polynomial<T>& a, std::complex<T> *x) {
@@ -76,7 +76,7 @@ namespace anpi {
         }
         nrerror("too many iterations in laguer");
         return std::numeric_limits<T>::quiet_NaN();
-    }
+    }*/
 }
 
 #endif
