@@ -1,18 +1,281 @@
-/home/jeanpaul/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4674.29/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/jeanpaul/Code/c++ code/Proyecto1Analisis"
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   system
---   filesystem
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   system
---   filesystem
---   unit_test_framework
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   system
---   filesystem
---   unit_test_framework
--- Configuring done
--- Generating done
--- Build files have been written to: /home/jeanpaul/Code/c++ code/Proyecto1Analisis/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\User\CLionProjects\Proyecto1Analisis
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:460 (file):
+  file STRINGS file
+  "C:/Users/User/CLionProjects/Proyecto1Analisis/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe"
+  cannot be read.
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:36 (CMAKE_DETERMINE_COMPILER_ID_CHECK)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCXXCompiler.cmake:104 (CMAKE_DETERMINE_COMPILER_ID)
+  CMakeLists.txt:4 (project)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:466 (list):
+  list sub-command REMOVE_DUPLICATES requires list to be present.
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:36 (CMAKE_DETERMINE_COMPILER_ID_CHECK)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCXXCompiler.cmake:104 (CMAKE_DETERMINE_COMPILER_ID)
+  CMakeLists.txt:4 (project)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:528 (file):
+  file failed to open for reading (Invalid argument):
+
+    C:/Users/User/CLionProjects/Proyecto1Analisis/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:36 (CMAKE_DETERMINE_COMPILER_ID_CHECK)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCXXCompiler.cmake:104 (CMAKE_DETERMINE_COMPILER_ID)
+  CMakeLists.txt:4 (project)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:530 (string):
+  string begin index: 1 is out of range 0 - 0
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:36 (CMAKE_DETERMINE_COMPILER_ID_CHECK)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCXXCompiler.cmake:104 (CMAKE_DETERMINE_COMPILER_ID)
+  CMakeLists.txt:4 (project)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:538 (math):
+  math cannot parse the expression: " * 16 + ": syntax error, unexpected
+  exp_TIMES, expecting exp_PLUS or exp_MINUS or exp_OPENPARENT or exp_NUMBER
+  (2)
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:36 (CMAKE_DETERMINE_COMPILER_ID_CHECK)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCXXCompiler.cmake:104 (CMAKE_DETERMINE_COMPILER_ID)
+  CMakeLists.txt:4 (project)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:540 (file):
+  file failed to open for reading (Invalid argument):
+
+    C:/Users/User/CLionProjects/Proyecto1Analisis/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:36 (CMAKE_DETERMINE_COMPILER_ID_CHECK)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCXXCompiler.cmake:104 (CMAKE_DETERMINE_COMPILER_ID)
+  CMakeLists.txt:4 (project)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:578 (file):
+  file failed to open for reading (Invalid argument):
+
+    C:/Users/User/CLionProjects/Proyecto1Analisis/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCompilerId.cmake:36 (CMAKE_DETERMINE_COMPILER_ID_CHECK)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeDetermineCXXCompiler.cmake:104 (CMAKE_DETERMINE_COMPILER_ID)
+  CMakeLists.txt:4 (project)
+
+
+-- The CXX compiler identification is GNU 6.3.0
+-- Check for working CXX compiler: C:/MinGW/bin/g++.exe
+-- Check for working CXX compiler: C:/MinGW/bin/g++.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - failed
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Warning at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:765 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:869 (_Boost_COMPONENT_DEPENDENCIES)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1472 (_Boost_MISSING_DEPENDENCIES)
+  src/CMakeLists.txt:8 (find_package)
+
+
+CMake Warning at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:765 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:869 (_Boost_COMPONENT_DEPENDENCIES)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1472 (_Boost_MISSING_DEPENDENCIES)
+  src/CMakeLists.txt:8 (find_package)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1842 (message):
+  Unable to find the requested Boost libraries.
+
+  Unable to find the Boost header files.  Please set BOOST_ROOT to the root
+  directory containing Boost or BOOST_INCLUDEDIR to the directory containing
+  Boost's headers.
+Call Stack (most recent call first):
+  src/CMakeLists.txt:8 (find_package)
+
+
+-- Try OpenMP CXX flag = [-fopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [ ]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-fopenmp=libomp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [/openmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-Qopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-openmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-xopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [+Oopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-qsmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-mp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Could NOT find OpenMP (missing:  OpenMP_CXX_FLAGS) 
+CMake Warning at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:765 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:869 (_Boost_COMPONENT_DEPENDENCIES)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1472 (_Boost_MISSING_DEPENDENCIES)
+  test/CMakeLists.txt:1 (find_package)
+
+
+CMake Warning at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:765 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:869 (_Boost_COMPONENT_DEPENDENCIES)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1472 (_Boost_MISSING_DEPENDENCIES)
+  test/CMakeLists.txt:1 (find_package)
+
+
+CMake Warning at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:765 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:869 (_Boost_COMPONENT_DEPENDENCIES)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1472 (_Boost_MISSING_DEPENDENCIES)
+  test/CMakeLists.txt:1 (find_package)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1842 (message):
+  Unable to find the requested Boost libraries.
+
+  Unable to find the Boost header files.  Please set BOOST_ROOT to the root
+  directory containing Boost or BOOST_INCLUDEDIR to the directory containing
+  Boost's headers.
+Call Stack (most recent call first):
+  test/CMakeLists.txt:1 (find_package)
+
+
+-- Try OpenMP CXX flag = [-fopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [ ]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-fopenmp=libomp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [/openmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-Qopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-openmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-xopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [+Oopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-qsmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-mp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Could NOT find OpenMP (missing:  OpenMP_CXX_FLAGS) 
+CMake Warning at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:765 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:869 (_Boost_COMPONENT_DEPENDENCIES)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1472 (_Boost_MISSING_DEPENDENCIES)
+  benchmarks/CMakeLists.txt:1 (find_package)
+
+
+CMake Warning at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:765 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:869 (_Boost_COMPONENT_DEPENDENCIES)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1472 (_Boost_MISSING_DEPENDENCIES)
+  benchmarks/CMakeLists.txt:1 (find_package)
+
+
+CMake Warning at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:765 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:869 (_Boost_COMPONENT_DEPENDENCIES)
+  C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1472 (_Boost_MISSING_DEPENDENCIES)
+  benchmarks/CMakeLists.txt:1 (find_package)
+
+
+CMake Error at C:/Program Files/JetBrains/CLion 2017.2.2/bin/cmake/share/cmake-3.8/Modules/FindBoost.cmake:1842 (message):
+  Unable to find the requested Boost libraries.
+
+  Unable to find the Boost header files.  Please set BOOST_ROOT to the root
+  directory containing Boost or BOOST_INCLUDEDIR to the directory containing
+  Boost's headers.
+Call Stack (most recent call first):
+  benchmarks/CMakeLists.txt:1 (find_package)
+
+
+-- Try OpenMP CXX flag = [-fopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [ ]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-fopenmp=libomp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [/openmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-Qopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-openmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-xopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [+Oopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-qsmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Try OpenMP CXX flag = [-mp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Failed
+-- Could NOT find OpenMP (missing:  OpenMP_CXX_FLAGS) 
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+Boost_INCLUDE_DIR (ADVANCED)
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/src
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/src
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/src
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/src
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/src
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/test
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/test
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/test
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/test
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/benchmarks
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/benchmarks
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/benchmarks
+   used as include directory in directory C:/Users/User/CLionProjects/Proyecto1Analisis/benchmarks
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/User/CLionProjects/Proyecto1Analisis/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/User/CLionProjects/Proyecto1Analisis/cmake-build-debug/CMakeFiles/CMakeError.log".
