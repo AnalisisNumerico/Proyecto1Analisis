@@ -45,7 +45,7 @@ namespace anpi {
                 laguer(a,x,eps);
         for (j=2;j<=m;j++) {
             for (i=j-1;i>=1;i--) {
-                if (roots[i].r <= x.r) break;
+                if (roots[i].real() <= x.real()) break;
                 roots[i+1]=roots[i];
             }
             roots[i+1]=x;

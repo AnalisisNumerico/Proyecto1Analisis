@@ -69,6 +69,7 @@ namespace anpi {
                 BOOST_CHECK(std::abs(t2<T>(sol))<eps);
                 sol = solver(t3<T>,T(0),eps);
                 BOOST_CHECK(std::abs(t3<T>(sol))<eps);
+
             }
         }
 
@@ -113,6 +114,7 @@ BOOST_AUTO_TEST_SUITE( RootFinder )
 
     BOOST_AUTO_TEST_CASE(Muller)
     {
+
         anpi::test::rootTest<float>(anpi::Muller);
         anpi::test::rootTest<double>(anpi::Muller);
     }

@@ -33,11 +33,11 @@ namespace anpi {
         std::complex x,b,c,ad[MAXM];
         boost::math::tools::polynomial<T> poly=polyOriginal;
         boost::math::tools::polynomial<T> residuo;
+        T newRoot;
         for (int j=0;j<=m;j++){
             newRoot = anpi::Muller(poly,x,eps);
             roots.push_back(newRoot);
-            poly=anpi::deflate(poly, x, residuo);
-            //x=newRoot;
+            poly=anpi::deflate(poly, newRoot, residuo);
         }
 
         if (polish)
@@ -45,11 +45,12 @@ namespace anpi {
                 anpi::Muller(poly,x,eps);
             for (j=2;j<=m;j++){
                 for (i=j-1;i>=1;i--) {
-                    if (roots[i].r <= x.r) break;
+                    if (roots[i].real() <= x.real()) break;
                     roots[i+1]=roots[i];
                 }
                 roots[i+1]=x;
             }
+
     }
 }
 #endif
