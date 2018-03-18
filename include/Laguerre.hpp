@@ -39,7 +39,7 @@ namespace anpi {
     */
 
     template<typename T>
-    T laguer(const boost::math::tools::polynomial<T>& a, std::complex<T> *x, const T eps) {
+    T laguerre(const boost::math::tools::polynomial<T>& a, std::complex<T> *x, const T eps) {
         int m = a.degree();
         float abx, abp, abm, err;
         std::complex<T> dx, x1, b, d, f, g, h, sq, gp, gm, g2;

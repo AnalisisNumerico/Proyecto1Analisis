@@ -14,6 +14,8 @@
 #include "Deflate2.hpp"
 #include "Muller.hpp"
 #include "Laguerre.hpp"
+#include "mullerRoots.hpp"
+#include "laguerreRoots.hpp"
 
 #include <iostream>
 #include <exception>
@@ -27,7 +29,6 @@
 
 namespace anpi {
     namespace test {
-
         /// Square of a number
         template<typename T>
         ///x^4-5x^2+5x^3-45x+4x^2-36
@@ -35,18 +36,18 @@ namespace anpi {
 
         /// First testing function for roots (x-1)(x²+ 9)(x+2)
         /// x^4 + x^3 + 7x^2 + 9x - 18
-        template<typename T>                                            ///PREGUNTAR SI DEJAR LAS FUNCIONES ASI O USAR POLINOMIAL
-        polynomial<T> t1(const T x) { return polynomial<T> b{{-2.0, 1.0}}; } /// raices reales y complejas x=1,\:x=3i,\:x=-3i,\:x=-2
+        template<typename T>                                            ///PREGUNTAR SI DEJAR LAS FUNCIONES ASI O USAR POLINOMIAL, EVALUATE
+        polynomial<T> t1(const T x) { return polynomial<T> t1{{1.0,1.0,7.0, 9.0,-18.0}}.evaluate(x); } /// raices reales y complejas x=1,\:x=3i,\:x=-3i,\:x=-2
 
         /// Second testing function for roots (x+1)(x²-9)(x+4)
         ///x^4+3x^3-7x^2-27x-18
         template<typename T>
-        T t2(const T x)  { return (x+1)*((x*x)-9)*(x+2); }  /// 4 raices reales x=-1,\:x=-2,\:x=-3,\:x=3
+        polynomial<T> t2(const T x)  { return polynomial<T> t1{{1.0,3.0,-7.0, -27.0,-18.0}}.evaluate(x); }  /// 4 raices reales x=-1,\:x=-2,\:x=-3,\:x=3
 
         /// Third testing function for roots (x-2)(x²+16)(x+9)
         template<typename T>
-        ///x^4+7x^3-2x^2+112x-288=0\:
-        T t3(const T x)  { return (x-1)*((x*x)+ 16)*(x+9); } /// raices reales y complejas x=2,\:x=4i,\:x=-4i,\:x=-9
+        ///x^4+7x^3-2x^2+112x-288\:
+        polynomial<T> t3(const T x)  { return polynomial<T> t1{{1.0,7.0,-2.0,112.0,-288.0}}.evaluate(x); } /// raices reales y complejas x=2,\:x=4i,\:x=-4i,\:x=-9
 
 
 
@@ -56,37 +57,41 @@ namespace anpi {
         };
 
         /// Test the given closed root finder
-        template<typename T>
+        template<typename T>                                                            ///ES UNA STD::FUNCTION EL SOLVER?
         void rootTest(const std::function<T(const boost::math::tools::polynomial<T>&,
                                             T,
-                                            const T)>& solver,
-                      const TestIntervalMode testInterval=TestInterval) {
-
-            T eps=static_cast<T>(0.001);
-
-             catch wrong interval
-            if (testInterval==TestInterval) {
-
-                try {
-                    solver(t1<T>,T(2),T(0),eps);
-                    BOOST_CHECK(false && "solver should catch inverted interval");
-                } catch(Exception exc ) {
-                    BOOST_CHECK(true && "successfully catched");
-            }try {
-                solver(t3<T>,T(1),T(2),eps);
-                BOOST_CHECK(false && "solver should catch unenclosed root");
-            } catch(Exception exc ) {
-                BOOST_CHECK(true && "successfully catched");
-                }
-            }
+                                            const T)>& solver) {
 
             for (T eps=T(1)/T(10); eps>static_cast<T>(1.0e-7); eps/=T(10)) {
-                T sol = solver(t1<T>, T(0), T(2), eps);
+                T sol = solver(t1<T>, T(0), eps);
                 BOOST_CHECK(std::abs(t1<T>(sol)) < eps);
-                sol = solver(t2<T>, T(0), T(2), eps);
+                sol = solver(t2<T>, T(0), eps);
                 BOOST_CHECK(std::abs(t2<T>(sol))<eps);
-                sol = solver(t3<T>,T(0),T(0.5),eps);
+                sol = solver(t3<T>,T(0),eps);
                 BOOST_CHECK(std::abs(t3<T>(sol))<eps);
+            }
+        }
+
+        /// Test the given closed root finder
+        template<typename T>                                                            ///ES UNA STD::FUNCTION EL SOLVER?
+        void rootsTest(const std::function<T(const boost::math::tools::polynomial<T>&,
+                T, std::vector<T>&, int, const T)>& solver,
+        const TestIntervalMode testInterval=TestInterval) {
+
+            std::vector<T> rootst1;
+            std::vector<T> rootst2;
+            std::vector<T> rootst3;
+
+            std::vector<T> rootsSolt1 = solver(t1<T>, T(0),rootst1, 0,eps);
+            std::vector<T> rootsSolt2 = solver(t2<T>, T(0),rootst2, 0,eps);
+            std::vector<T> rootsSolt3 = solver(t3<T>, T(0),rootst3, 0,eps);
+
+            for(int i=0; i<rootsSolt1.size(); i++) {
+                for (T eps=T(1)/T(10); eps>static_cast<T>(1.0e-7); eps/=T(10)) {
+                    BOOST_CHECK(std::abs(t1<T>(rootsSolt1[i])) < eps);
+                    BOOST_CHECK(std::abs(t2<T>(rootsSolt1[i]))<eps);
+                    BOOST_CHECK(std::abs(t3<T>(rootsSolt1[i]))<eps);
+                }
             }
         }
 
@@ -108,14 +113,23 @@ BOOST_AUTO_TEST_SUITE( RootFinder )
 
     BOOST_AUTO_TEST_CASE(Muller)
     {
-
+        anpi::test::rootTest<float>(anpi::Muller);
+        anpi::test::rootTest<double>(anpi::Muller);
     }
 
     BOOST_AUTO_TEST_CASE(Laguerre)
     {
-        //anpi::test::rootTest<float>(anpi::laguer);
-        //anpi::test::rootTest<double>(anpi::laguer);
+        anpi::test::rootTest<float>(anpi::laguerre);
+        anpi::test::rootTest<double>(anpi::laguerre);
     }
+    BOOST_AUTO_TEST_CASE(mullerRoots){
+                anpi::test::rootTest<float>(anpi::mullerRoots);
+                anpi::test::rootTest<double>(anpi::mullerRoots);
+        }
+    BOOST_AUTO_TEST_CASE(laguerreRoots){
 
+                anpi::test::rootTest<float>(anpi::laguerreRoots);
+                anpi::test::rootTest<double>(anpi::laguerreRoots);
+        }
 
 BOOST_AUTO_TEST_SUITE_END()

@@ -28,7 +28,7 @@ namespace anpi {
     const int MAX_ITERATIONS = 10000;
 
     template<typename T>
-    void mullerRoots(const boost::math::tools::polynomial<T>& polyOriginal, int x, const std::vector<T>& roots, int polish, const T eps) {
+    void mullerRoots(const boost::math::tools::polynomial<T>& polyOriginal, T x, const std::vector<T>& roots, int polish, const T eps){
         m = poly.degree();
         std::complex x,b,c,ad[MAXM];
         boost::math::tools::polynomial<T> poly=polyOriginal;

@@ -25,7 +25,7 @@ namespace anpi {
 
 
     template<typename T>
-    void zroots(fcomplex a[], int m, fcomplex roots[], int polish, const T eps) {
+    void laguerreRoots(fcomplex a[], int m, fcomplex roots[], int polish, const T eps) {
         void laguer(fcomplex a[], int m, fcomplex *x, int *its);
         int i,its,j,jj;
         fcomplex x,b,c,ad[MAXM];
