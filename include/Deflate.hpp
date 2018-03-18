@@ -3,6 +3,8 @@
 #ifndef ANPI_DEFLACION
 #define ANPI_DEFLACION
 
+using namespace polinomial = boost::math::tools;
+
 namespace anpi {
 
     /**
@@ -17,8 +19,9 @@ namespace anpi {
                                               const T& root,
                                               boost::math::tools::polynomial<T>& residuo) {
 
-        boost::math::tools::polynomial<double> q{{}};
+/*
         residuo = poly;
+        boost::math::tools::polynomial<T> q = {{}};
         q = poly;
 
         int n = poly.degree();
@@ -32,7 +35,28 @@ namespace anpi {
             residuo[k] -= q[k] * -root;
         }
 
-        for(int i = 1; i <= n; i++) { //limpia el residuo
+        for(int i = 1; i <= n; i++) {
+            residuo[i] = T(0);
+        }
+
+        return q;
+*/
+        boost::math::tools::polynomial<T> q = {{}};
+        q = poly;
+        int n = poly.degree();
+        T remanente = poly[n];
+        q[n] = T(0);
+
+        for(int i = n - 1; i >= 0; i--){
+            T swap = q[i];
+            q[i] = remanente;
+            remanente = swap + remanente * root;
+        }
+
+        residuo = poly;
+        residuo[0] = remanente;
+
+        for(int i = 1; i <= n; i++) {
             residuo[i] = T(0);
         }
 

@@ -3,10 +3,10 @@
 
 test/CMakeFiles/tester.dir/testDeflate.cpp.o
  ../include/Deflate.hpp
- /home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/testDeflate.cpp
+ /home/jeanpaul/Code/c++/Proyecto1Analisis/test/testDeflate.cpp
 test/CMakeFiles/tester.dir/testRootFinders.cpp.o
  ../include/Deflate.hpp
  ../include/Deflate2.hpp
  ../include/Laguerre.hpp
  ../include/Muller.hpp
- /home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/testRootFinders.cpp
+ /home/jeanpaul/Code/c++/Proyecto1Analisis/test/testRootFinders.cpp

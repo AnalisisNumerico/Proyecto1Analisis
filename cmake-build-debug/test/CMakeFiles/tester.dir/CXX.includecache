@@ -22,39 +22,27 @@ boost/math/tools/polynomial.hpp
 
 ../include/Muller.hpp
 
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/testDeflate.cpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/test/testDeflate.cpp
 boost/test/unit_test.hpp
 -
 boost/math/tools/polynomial.hpp
 -
 Deflate.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Deflate.hpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/test/Deflate.hpp
 iostream
--
-exception
--
-cstdlib
--
-complex
--
-iostream
--
-functional
--
-cmath
 -
 
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/testRootFinders.cpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/test/testRootFinders.cpp
 boost/test/unit_test.hpp
 -
 Deflate.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Deflate.hpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/test/Deflate.hpp
 Deflate2.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Deflate2.hpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/test/Deflate2.hpp
 Muller.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Muller.hpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/test/Muller.hpp
 Laguerre.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Laguerre.hpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/test/Laguerre.hpp
 iostream
 -
 exception

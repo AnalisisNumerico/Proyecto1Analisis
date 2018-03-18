@@ -18,38 +18,28 @@
 #include "Deflate.hpp"
 #include "Deflate2.hpp"
 
-#include <boost/test/unit_test.hpp>
+//#include <boost/test/unit_test.hpp>
 #include <boost/math/tools/polynomial.hpp>
 
-using std::string;
-using std::exception;
-using std::cout;
-using std::abs;
-using std::pair;
-
-using namespace boost::math;
-using namespace boost::math::tools; // for polynomial
-using boost::lexical_cast;
-
-
-
 int main() {
-/*
-    boost::math::tools::polynomial<double> const poly{{double(-12), double(5), double(3)}};
 
-    boost::math::tools::polynomial<double> const q{{double(-4), double(3) ,double(0)}};
+    boost::math::tools::polynomial<double> const poly{{-12, 5, 3}};
+    boost::math::tools::polynomial<double> const q{{-4, 3, 0}};
+    boost::math::tools::polynomial<double> r{{}};
     double const root = -3;
+
     std::cout << anpi::deflate<double>(poly,root,r);
     std::cout << r;
-*/
 
     boost::math::tools::polynomial<double> const poly2{{1, 1, 1, 2}};
-    boost::math::tools::polynomial<double> r{{}};
     std::complex<double> i;
     i = -1;
-    std::complex<double> const root = sqrt(i);
-    std::cout << anpi::deflate2(poly2,root,r);
+    std::complex<double> const root2 = sqrt(i);
+    std::cout << anpi::deflate2(poly2,root2,r);
     std::cout << r;
+    std::vector<double> const d3a = {{10, -6, -4, 3}};
+
+    std::cout << anpi::deflate2(poly2,root2,r);
 
     return 0;
 }

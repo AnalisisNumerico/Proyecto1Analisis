@@ -8,7 +8,7 @@ namespace anpi {
     template<typename T>
     boost::math::tools::polynomial<T> deflate2(const boost::math::tools::polynomial<T>& poly,
                                                const std::complex<T>& root,
-                                               boost::math::tools::polynomial<T>& residuo) { //lo estoy forzando a funcionar para complejos
+                                               boost::math::tools::polynomial<T>& residuo) {
 
         boost::math::tools::polynomial<double> q{{}};
         residuo = poly;
@@ -20,12 +20,15 @@ namespace anpi {
             q[j] = T(0);
         }
 
-        T raiz = abs(root);
-        raiz *= raiz;
+        T raiz2 = 2 * root.real();
+
+        T raiz1 = abs(root);
+        raiz1 *= raiz1;
 
         for(int k = n - 2; k >= 0; k--) {
             q[k] = residuo[k + 2];
-            residuo[k] -= q[k] * raiz; //talvez se quite
+            residuo[k+1] -= q[k] * raiz2;
+            residuo[k] -= q[k] * raiz1;
         }
         for(int i = 2; i <= n; i++) { //limpia el residuo
             residuo[i] = T(0);
