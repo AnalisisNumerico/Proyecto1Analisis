@@ -14,6 +14,10 @@ boost/math/tools/polynomial.hpp
 boost/math/tools/polynomial.hpp
 -
 
+../include/Exception.hpp
+exception
+-
+
 ../include/Laguerre.hpp
 boost/test/unit_test.hpp
 -
@@ -21,14 +25,40 @@ boost/math/tools/polynomial.hpp
 -
 
 ../include/Muller.hpp
+RootInterpolation.hpp
+../include/RootInterpolation.hpp
+RootNewtonRaphson.hpp
+../include/RootNewtonRaphson.hpp
+iostream
+-
 
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/testDeflate.cpp
+../include/RootInterpolation.hpp
+cmath
+-
+limits
+-
+functional
+-
+iostream
+-
+Exception.hpp
+../include/Exception.hpp
+
+../include/RootNewtonRaphson.hpp
+cmath
+-
+limits
+-
+functional
+-
+
+/local/home/curso/CLionProjects/Proyecto1Analisis/test/testDeflate.cpp
 boost/test/unit_test.hpp
 -
 boost/math/tools/polynomial.hpp
 -
 Deflate.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Deflate.hpp
+/local/home/curso/CLionProjects/Proyecto1Analisis/test/Deflate.hpp
 iostream
 -
 exception
@@ -44,17 +74,23 @@ functional
 cmath
 -
 
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/testRootFinders.cpp
+/local/home/curso/CLionProjects/Proyecto1Analisis/test/testMain.cpp
 boost/test/unit_test.hpp
 -
+
+/local/home/curso/CLionProjects/Proyecto1Analisis/test/testRootFinders.cpp
+boost/test/unit_test.hpp
+-
+boost/math/tools/polynomial.hpp
+-
 Deflate.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Deflate.hpp
+/local/home/curso/CLionProjects/Proyecto1Analisis/test/Deflate.hpp
 Deflate2.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Deflate2.hpp
+/local/home/curso/CLionProjects/Proyecto1Analisis/test/Deflate2.hpp
 Muller.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Muller.hpp
+/local/home/curso/CLionProjects/Proyecto1Analisis/test/Muller.hpp
 Laguerre.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/Laguerre.hpp
+/local/home/curso/CLionProjects/Proyecto1Analisis/test/Laguerre.hpp
 iostream
 -
 exception

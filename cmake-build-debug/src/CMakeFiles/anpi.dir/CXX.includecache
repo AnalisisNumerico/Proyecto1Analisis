@@ -14,7 +14,7 @@ boost/math/tools/polynomial.hpp
 boost/math/tools/polynomial.hpp
 -
 
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/src/main.cpp
+/local/home/curso/CLionProjects/Proyecto1Analisis/src/main.cpp
 cstdlib
 -
 iostream
@@ -26,11 +26,9 @@ complex
 iomanip
 -
 Deflate.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/src/Deflate.hpp
+/local/home/curso/CLionProjects/Proyecto1Analisis/src/Deflate.hpp
 Deflate2.hpp
-/home/jeanpaul/Code/c++ code/Proyecto1Analisis/src/Deflate2.hpp
-boost/test/unit_test.hpp
--
+/local/home/curso/CLionProjects/Proyecto1Analisis/src/Deflate2.hpp
 boost/math/tools/polynomial.hpp
 -
 

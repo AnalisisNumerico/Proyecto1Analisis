@@ -4,9 +4,14 @@
 test/CMakeFiles/tester.dir/testDeflate.cpp.o: ../include/Deflate.hpp
 test/CMakeFiles/tester.dir/testDeflate.cpp.o: ../test/testDeflate.cpp
 
+test/CMakeFiles/tester.dir/testMain.cpp.o: ../test/testMain.cpp
+
 test/CMakeFiles/tester.dir/testRootFinders.cpp.o: ../include/Deflate.hpp
 test/CMakeFiles/tester.dir/testRootFinders.cpp.o: ../include/Deflate2.hpp
+test/CMakeFiles/tester.dir/testRootFinders.cpp.o: ../include/Exception.hpp
 test/CMakeFiles/tester.dir/testRootFinders.cpp.o: ../include/Laguerre.hpp
 test/CMakeFiles/tester.dir/testRootFinders.cpp.o: ../include/Muller.hpp
+test/CMakeFiles/tester.dir/testRootFinders.cpp.o: ../include/RootInterpolation.hpp
+test/CMakeFiles/tester.dir/testRootFinders.cpp.o: ../include/RootNewtonRaphson.hpp
 test/CMakeFiles/tester.dir/testRootFinders.cpp.o: ../test/testRootFinders.cpp
 

@@ -17,8 +17,6 @@
 
 #include "Deflate.hpp"
 #include "Deflate2.hpp"
-
-#include <boost/test/unit_test.hpp>
 #include <boost/math/tools/polynomial.hpp>
 
 using std::string;
@@ -27,9 +25,7 @@ using std::cout;
 using std::abs;
 using std::pair;
 
-using namespace boost::math;
 using namespace boost::math::tools; // for polynomial
-using boost::lexical_cast;
 
 
 
@@ -43,13 +39,10 @@ int main() {
     std::cout << r;
 */
 
-    boost::math::tools::polynomial<double> const poly2{{1, 1, 1, 2}};
-    boost::math::tools::polynomial<double> r{{}};
-    std::complex<double> i;
-    i = -1;
-    std::complex<double> const root = sqrt(i);
-    std::cout << anpi::deflate2(poly2,root,r);
-    std::cout << r;
+    boost::array<double, 4> const d3a = {{10, -6, -4, 3}};
+    polynomial<double> const a(d3a.begin(), 4);
+    std::cout << "f1 " <<     a.evaluate(1) <<std::endl;
+
 
     return 0;
 }

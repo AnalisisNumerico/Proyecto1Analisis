@@ -3,10 +3,15 @@
 
 test/CMakeFiles/tester.dir/testDeflate.cpp.o
  ../include/Deflate.hpp
- /home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/testDeflate.cpp
+ /local/home/curso/CLionProjects/Proyecto1Analisis/test/testDeflate.cpp
+test/CMakeFiles/tester.dir/testMain.cpp.o
+ /local/home/curso/CLionProjects/Proyecto1Analisis/test/testMain.cpp
 test/CMakeFiles/tester.dir/testRootFinders.cpp.o
  ../include/Deflate.hpp
  ../include/Deflate2.hpp
+ ../include/Exception.hpp
  ../include/Laguerre.hpp
  ../include/Muller.hpp
- /home/jeanpaul/Code/c++ code/Proyecto1Analisis/test/testRootFinders.cpp
+ ../include/RootInterpolation.hpp
+ ../include/RootNewtonRaphson.hpp
+ /local/home/curso/CLionProjects/Proyecto1Analisis/test/testRootFinders.cpp

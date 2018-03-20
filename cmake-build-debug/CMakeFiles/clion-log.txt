@@ -1,4 +1,4 @@
-/home/jeanpaul/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4674.29/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/jeanpaul/Code/c++ code/Proyecto1Analisis"
+/local/home/curso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4674.29/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /local/home/curso/CLionProjects/Proyecto1Analisis
 -- Boost version: 1.58.0
 -- Found the following Boost libraries:
 --   system
@@ -15,4 +15,4 @@
 --   unit_test_framework
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/jeanpaul/Code/c++ code/Proyecto1Analisis/cmake-build-debug
+-- Build files have been written to: /local/home/curso/CLionProjects/Proyecto1Analisis/cmake-build-debug
