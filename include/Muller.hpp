@@ -1,13 +1,12 @@
-
 /**
- * Copyright (C) 2018
- * Área Académica de Ingeniería en Computadoras, ITCR, Costa Rica
- *
- * This file is part of the numerical analysis lecture CE3102 at TEC
- *
- * @Author: Gabriel Espinoza Rojas
- * @Date  : 10.03.2018
- */
+* Copyright (C) 2018
+* Área Académica de Ingeniería en Computadoras, ITCR, Costa Rica
+*
+* This file is part of the numerical analysis lecture CE3102 at TEC
+*
+* @Author: Gabriel Espinoza Rojas
+* @Date : 10.03.2018
+*/
 
 
 
@@ -17,50 +16,57 @@
 
 #include "RootInterpolation.hpp"
 #include "RootNewtonRaphson.hpp"
-#include <boost/test/unit_test.hpp>
-#include <boost/math/tools/polynomial.hpp>
+#include <iostream>
 
 namespace anpi {
-
 
     const int MAX_ITERATIONS = 10000;
     template<typename T>
     T Muller(const boost::math::tools::polynomial<T>& poly,
              T a, const T eps) {
+        T b;
+        T c;
+        b = anpi::rootNewtonRaphson(poly, a, eps);
+        if(a<b){
+            c = anpi::rootInterpolation(poly, a, b, eps);
+        }else{
+            c = anpi::rootInterpolation(poly, b, a, eps);
+        }
 
-        T b = anpi::rootNewtonRaphson(poly, a, eps);
-        T c = anpi::rootInterpolation(poly, a, b, eps);
+        std::cout << "a " <<a<< std::endl;
+        std::cout << "b " << b<<std::endl;
+        std::cout << "c " << c<<std::endl;
+
+        //a = T(0);
+        //b = T(-0.505356);
+        //c = T(-0.5);
+
 
         T res;
-
         int i;
 
-        for (i = 0;;++i)     ///PREGUNTAR FOR
-        {
-            // Calculating various constants required
-            // to calculate x3
-            T f1 = poly.evaluate(a);
-            T f2 = poly.evaluate(b);
-            T f3 = poly.evaluate(c);
-            T d1 = f1 - f3;
-            T d2 = f2 - f3;
-            T h1 = a - c;
-            T h2 = b - c;
-            T a0 = f3;
+        for (i = 0;;++i){
+            T f1 = poly.evaluate(a); // 1
+            T f2 = poly.evaluate(b); //1
+            T f3 = poly.evaluate(c); //1
+            T d1 = f1 - f3; //0
+            T d2 = f2 - f3; //0
+            T h1 = a - c; //0.50006  // xi - xi-1
+            T h2 = b - c; //0,000075 // xi-1 - xi-2
+            T a0 = f3; //1
             T a1 = (((d2*h1*h1) - (d1*h2*h2))
-                    / ((h1*h2) * (h1-h2)));
-            T a2 = (((d1*h2) - (d2*h1))/((h1*h2) * (h1-h2)));
-            T x = ((-2*a0) / (a1 + abs(std::sqrt(a1*a1-4*a0*a2))));
-            T y = ((-2*a0) / (a1-abs(std::sqrt(a1*a1-4*a0*a2))));
+                    / ((h1*h2) * (h1-h2))); //0
+            T a2 = (((d1*h2) - (d2*h1))/((h1*h2) * (h1-h2))); //0
+            T x = ((-T(2)*a0) / (a1 + abs(std::sqrt(a1*a1-T(4)*a0*a2)))); //
+            //std::cout << "x " << x<<std::endl;
+            T y = ((-T(2)*a0) / (a1-abs(std::sqrt(a1*a1-T(4)*a0*a2)))); //
+            //std::cout << "y " << y<<std::endl;
 
-            // Taking the root which is closer to x2
             if (x >= y)
                 res = x + c;
             else
                 res = y + c;
 
-            // checking for resemblance of x3 with x2 till
-            // two decimal places
             T m = res*T(100);
             float n = c*T(100);
             m = floor(m);
@@ -70,8 +76,8 @@ namespace anpi {
             a = b;
             b = c;
             c = res;
-            if (i > MAX_ITERATIONS)
-            {
+            if (i > MAX_ITERATIONS){
+                std::cout << "res " << res<<std::endl;
                 return std::numeric_limits<T>::quiet_NaN();
             }
         }
@@ -81,5 +87,6 @@ namespace anpi {
 
         return std::numeric_limits<T>::quiet_NaN();
     }
+
 }
 #endif

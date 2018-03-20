@@ -19,27 +19,18 @@
 
 #include <boost/math/tools/polynomial.hpp>
 
-int main() {
 
-
-    for(int j = 0; j < 1; j++) {
-        boost::math::tools::polynomial<double> const poly{{-12, 5, 3}};
-        boost::math::tools::polynomial<double> const q{{-4, 3, 0}};
-        boost::math::tools::polynomial<double> r{{}};
-        double const root = -3;
-
-        std::cout << anpi::deflate<double>(poly,root,r);
-        std::cout << r << std::endl;
-
-        boost::math::tools::polynomial<double> const poly2{{1, 1, 1, 2}};
-        std::complex<double> i;
-        i = -1;
-        std::complex<double> const root2 = sqrt(i);
-        std::cout << anpi::deflate2(poly2,root2,r);
-        std::cout << r;
-        std::cout << anpi::deflate2(poly2,root2,r) << std::endl;
-
+int main(int argc, char* argv[]) {
+    // Check the number of parameters
+    if (argc < 2) {
+        // Tell the user how to run the program
+        std::cerr << "Usage: " << argv[0] << " NAME" << std::endl;
+        /* "Usage messages" are a conventional way of telling the user
+         * how to run a program if they enter the command incorrectly.
+         */
+        return 1;
     }
-
+    // Print the user's name:
+    std::cout << argv[0] << "says hello, " << argv[1] << "!" << std::endl;
     return 0;
 }

@@ -29,9 +29,7 @@ RootInterpolation.hpp
 ../include/RootInterpolation.hpp
 RootNewtonRaphson.hpp
 ../include/RootNewtonRaphson.hpp
-boost/test/unit_test.hpp
--
-boost/math/tools/polynomial.hpp
+iostream
 -
 
 ../include/RootInterpolation.hpp
@@ -40,6 +38,8 @@ cmath
 limits
 -
 functional
+-
+iostream
 -
 Exception.hpp
 ../include/Exception.hpp
