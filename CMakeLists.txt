@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 
+project(proyecto1 VERSION 0.0.0 LANGUAGES CXX)
 
-project(Proyecto1Analisis VERSION 0.0.0 LANGUAGES CXX)
-
+add_definitions(-pg)
 
 add_subdirectory (src)
 
 enable_testing ()
 add_subdirectory (test)
-add_subdirectory(benchmarks)

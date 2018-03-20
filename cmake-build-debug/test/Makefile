@@ -163,6 +163,33 @@ testDeflate.cpp.s:
 	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f test/CMakeFiles/tester.dir/build.make test/CMakeFiles/tester.dir/testDeflate.cpp.s
 .PHONY : testDeflate.cpp.s
 
+testMain.o: testMain.cpp.o
+
+.PHONY : testMain.o
+
+# target to build an object file
+testMain.cpp.o:
+	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f test/CMakeFiles/tester.dir/build.make test/CMakeFiles/tester.dir/testMain.cpp.o
+.PHONY : testMain.cpp.o
+
+testMain.i: testMain.cpp.i
+
+.PHONY : testMain.i
+
+# target to preprocess a source file
+testMain.cpp.i:
+	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f test/CMakeFiles/tester.dir/build.make test/CMakeFiles/tester.dir/testMain.cpp.i
+.PHONY : testMain.cpp.i
+
+testMain.s: testMain.cpp.s
+
+.PHONY : testMain.s
+
+# target to generate assembly for a file
+testMain.cpp.s:
+	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f test/CMakeFiles/tester.dir/build.make test/CMakeFiles/tester.dir/testMain.cpp.s
+.PHONY : testMain.cpp.s
+
 testRootFinders.o: testRootFinders.cpp.o
 
 .PHONY : testRootFinders.o
@@ -203,6 +230,9 @@ help:
 	@echo "... testDeflate.o"
 	@echo "... testDeflate.i"
 	@echo "... testDeflate.s"
+	@echo "... testMain.o"
+	@echo "... testMain.i"
+	@echo "... testMain.s"
 	@echo "... testRootFinders.o"
 	@echo "... testRootFinders.i"
 	@echo "... testRootFinders.s"

@@ -3,14 +3,16 @@
 #ifndef ANPI_DEFLACION2
 #define ANPI_DEFLACION2
 
+namespace polinomial = boost::math::tools;
+
 namespace anpi {
 
     template<typename T>
-    boost::math::tools::polynomial<T> deflate2(const boost::math::tools::polynomial<T>& poly,
-                                               const std::complex<T>& root,
-                                               boost::math::tools::polynomial<T>& residuo) {
+    polinomial::polynomial<T> deflate2(const polinomial::polynomial<T>& poly,
+                                       const std::complex<T>& root,
+                                       polinomial::polynomial<T>& residuo) {
 
-        boost::math::tools::polynomial<double> q{{}};
+        polinomial::polynomial<double> q{{}};
         residuo = poly;
         q = poly;
 

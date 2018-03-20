@@ -27,7 +27,7 @@ endif()
 
 file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp *.hpp)
 
-add_executable (tester ${TEST_SRCS})
+add_executable (tester ${TEST_SRCS} testMain.cpp)
 target_link_libraries (tester
                        anpi
                        ${Boost_FILESYSTEM_LIBRARY}

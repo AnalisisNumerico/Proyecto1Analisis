@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tester.dir/testDeflate.cpp.o"
+  "CMakeFiles/tester.dir/testMain.cpp.o"
   "CMakeFiles/tester.dir/testRootFinders.cpp.o"
   "tester.pdb"
   "tester"

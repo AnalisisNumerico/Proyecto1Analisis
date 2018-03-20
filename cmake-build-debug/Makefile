@@ -122,17 +122,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Proyecto1Analisis
+# Target rules for targets named proyecto1
 
 # Build rule for target.
-Proyecto1Analisis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Proyecto1Analisis
-.PHONY : Proyecto1Analisis
+proyecto1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 proyecto1
+.PHONY : proyecto1
 
 # fast build rule for target.
-Proyecto1Analisis/fast:
-	$(MAKE) -f src/CMakeFiles/Proyecto1Analisis.dir/build.make src/CMakeFiles/Proyecto1Analisis.dir/build
-.PHONY : Proyecto1Analisis/fast
+proyecto1/fast:
+	$(MAKE) -f src/CMakeFiles/proyecto1.dir/build.make src/CMakeFiles/proyecto1.dir/build
+.PHONY : proyecto1/fast
 
 #=============================================================================
 # Target rules for targets named anpi
@@ -160,19 +160,6 @@ tester/fast:
 	$(MAKE) -f test/CMakeFiles/tester.dir/build.make test/CMakeFiles/tester.dir/build
 .PHONY : tester/fast
 
-#=============================================================================
-# Target rules for targets named benchmark
-
-# Build rule for target.
-benchmark: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 benchmark
-.PHONY : benchmark
-
-# fast build rule for target.
-benchmark/fast:
-	$(MAKE) -f benchmarks/CMakeFiles/benchmark.dir/build.make benchmarks/CMakeFiles/benchmark.dir/build
-.PHONY : benchmark/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,10 +169,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... Proyecto1Analisis"
+	@echo "... proyecto1"
 	@echo "... anpi"
 	@echo "... tester"
-	@echo "... benchmark"
 .PHONY : help
 
 

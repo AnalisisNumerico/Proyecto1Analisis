@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wno-long-long -pedantic -march=native -fopenmp -g   CMakeFiles/proyecto1.dir/main.cpp.o  -o proyecto1 libanpi.a -lpython2.7 

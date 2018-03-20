@@ -122,19 +122,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/Proyecto1Analisis.dir/rule:
-	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Proyecto1Analisis.dir/rule
-.PHONY : src/CMakeFiles/Proyecto1Analisis.dir/rule
+src/CMakeFiles/proyecto1.dir/rule:
+	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/proyecto1.dir/rule
+.PHONY : src/CMakeFiles/proyecto1.dir/rule
 
 # Convenience name for target.
-Proyecto1Analisis: src/CMakeFiles/Proyecto1Analisis.dir/rule
+proyecto1: src/CMakeFiles/proyecto1.dir/rule
 
-.PHONY : Proyecto1Analisis
+.PHONY : proyecto1
 
 # fast build rule for target.
-Proyecto1Analisis/fast:
-	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/Proyecto1Analisis.dir/build.make src/CMakeFiles/Proyecto1Analisis.dir/build
-.PHONY : Proyecto1Analisis/fast
+proyecto1/fast:
+	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/proyecto1.dir/build.make src/CMakeFiles/proyecto1.dir/build
+.PHONY : proyecto1/fast
 
 # Convenience name for target.
 src/CMakeFiles/anpi.dir/rule:
@@ -157,7 +157,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/Proyecto1Analisis.dir/build.make src/CMakeFiles/Proyecto1Analisis.dir/main.cpp.o
+	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/proyecto1.dir/build.make src/CMakeFiles/proyecto1.dir/main.cpp.o
 	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.o
 .PHONY : main.cpp.o
 
@@ -167,7 +167,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/Proyecto1Analisis.dir/build.make src/CMakeFiles/Proyecto1Analisis.dir/main.cpp.i
+	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/proyecto1.dir/build.make src/CMakeFiles/proyecto1.dir/main.cpp.i
 	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.i
 .PHONY : main.cpp.i
 
@@ -177,7 +177,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/Proyecto1Analisis.dir/build.make src/CMakeFiles/Proyecto1Analisis.dir/main.cpp.s
+	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/proyecto1.dir/build.make src/CMakeFiles/proyecto1.dir/main.cpp.s
 	cd /home/jeanpaul/Code/c++/Proyecto1Analisis/cmake-build-debug && $(MAKE) -f src/CMakeFiles/anpi.dir/build.make src/CMakeFiles/anpi.dir/main.cpp.s
 .PHONY : main.cpp.s
 
@@ -189,7 +189,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... Proyecto1Analisis"
+	@echo "... proyecto1"
 	@echo "... rebuild_cache"
 	@echo "... anpi"
 	@echo "... main.o"

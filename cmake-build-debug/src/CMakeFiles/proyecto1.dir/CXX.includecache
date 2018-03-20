@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Deflate.hpp
+boost/math/tools/polynomial.hpp
+-
+
+../include/Deflate2.hpp
+boost/math/tools/polynomial.hpp
+-
+
+/home/jeanpaul/Code/c++/Proyecto1Analisis/src/main.cpp
+cstdlib
+-
+iostream
+-
+vector
+-
+complex
+-
+iomanip
+-
+Deflate.hpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/src/Deflate.hpp
+Deflate2.hpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/src/Deflate2.hpp
+boost/math/tools/polynomial.hpp
+-
+
