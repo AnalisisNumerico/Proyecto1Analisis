@@ -1,4 +1,3 @@
-
 /**
 * Copyright (C) 2018
 * Área Académica de Ingeniería en Computadoras, ITCR, Costa Rica
@@ -89,6 +88,28 @@ namespace anpi {
         }
         std::cout << "res " << res<<std::endl;
         return std::numeric_limits<T>::quiet_NaN();
+    }
+
+    template<typename T>
+    void mullerRoots(const boost::math::tools::polynomial<T>& polyOriginal, T x, std::vector<T>& roots, int polish, const T eps){
+        int m = polyOriginal.degree();
+        boost::math::tools::polynomial<T> poly=polyOriginal;
+        boost::math::tools::polynomial<T> residuo;
+        T newRoot;
+
+        int j;
+        for (j=0;j<=m;j++){
+            newRoot = anpi::Muller(poly,x,eps);
+            if (polish){
+                newRoot = anpi::Muller(polyOriginal,newRoot,eps);
+            }
+            roots.push_back(newRoot);
+            std::cout << newRoot << std::endl;
+
+            poly=anpi::deflate(poly, newRoot, residuo);
+        }
+
+
     }
 
 }

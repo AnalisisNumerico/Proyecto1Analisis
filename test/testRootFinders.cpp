@@ -74,8 +74,10 @@ namespace anpi {
         /// Test the given a root finder
         template<typename T>
         void rootTest() {
-
-
+            T eps=T(1)/T(10);
+            std::vector<T> rootst1;
+            anpi::mullerRoots(t1<T>(), T(0), rootst1,0,eps);
+            /*
             T eps=T(1)/T(10);
             T sol = anpi::Muller(t1<T>(), T(0), eps);
             std::cout << "Sol t1 "<< sol << std::endl;
@@ -102,7 +104,7 @@ namespace anpi {
                 sol = anpi::Muller(t3<T>(), T(0), eps);
                 //error = valorTeoricot3 - sol;
                 BOOST_CHECK(error<eps);
-            }
+            }*/
 
         }
 
