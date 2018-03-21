@@ -160,7 +160,7 @@ BOOST_AUTO_TEST_SUITE( RootFinder )
     BOOST_AUTO_TEST_CASE(Muller)
     {
         anpi::test::rootTest<float>();
-        anpi::test::rootTest<double>();
+        //anpi::test::rootTest<double>();
     }
 
     BOOST_AUTO_TEST_CASE(Laguerre)
