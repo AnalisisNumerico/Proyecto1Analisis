@@ -33,16 +33,15 @@ namespace anpi {
         std::complex<T> dx, x1, b, d, f, g, h, sq, gp, gm, g2;
         static float frac[10 + 1] = {0.0, 0.5, 0.25, 0.75, 0.13, 0.38, 0.62, 0.88, 1.0};
         for (int iter = 1; iter<= MAXIT; iter++) { //Loop over iterations up to allowed maximum.
-            b = a[m.real()];
+            b = a[m];
             err = std::abs(b);
             d = f = std::complex<T>(0.0, 0.0);
             abx = std::abs(x);
-            for (int j = m.real() - 1; j >= 0; j--) { //Efficient computation of the polynomial and its first two derivatives. f stores P'' /2.
+            for (int j = m - 1; j >= 0; j--) { //Efficient computation of the polynomial and its first two derivatives. f stores P'' /2.
                 f = ((x * f) + d);
                 d = ((x * d) + b);
                 b = ((x * b) + a[j]);
                 err = std::abs(b) + abx * err;
-                std::cout << "err " << err << std::endl;
             }
             err *= eps; //Estimate of roundoff error in evaluating polynomial.
             if (std::abs(b) <= err) {
@@ -51,9 +50,7 @@ namespace anpi {
             g = (d / b);            //The generic case: use Laguerre’s formula.
             g2 = (g * g);
             h = (g2 - (T(2.0) * (f / b)));
-            //sq = std::sqrt((float) (m - 1) * ((float) m* h)-g2);
-            sq = std::sqrt(((m.real() - 1) * ((m * h) - g2)));
-            //std::cout << "sq " << sq << std::endl;
+            sq = sqrt(((T)(m-1))*(((T)(m)*h)-g2));
             gp = g + sq;
             gm = g - sq;
             abp = std::abs(gp);
@@ -63,20 +60,12 @@ namespace anpi {
             gp = gm;
             }
 
-            if(std::fmax(abp, abm) > 0.0){
-                dx = std::complex<T>((float) m.real(), 0.0) / gp;
-            }else{
-                dx = ((T(1) + abx) * std::complex<T>(cos((float) iter), sin((float) iter)));
-            }
-            std::cout << "x(para menos) " <<x << std::endl;
-            std::cout << "dx " <<dx << std::endl;
+            dx=((fmax(abp,abm) > 0.0 ? ((std::complex<T>(m,0.0))/gp) : (1+abx)*(std::complex<T>(cos(iter),sin(iter)))));
 
             x1=x-dx;
-            std::cout << "x1 " <<x1 << std::endl;
-            if (x.real() == x1.real() && x.imag() == x1.imag()){
-                std::cout << "x " <<x << std::endl;
-                return x;           ///converge
-            }
+
+            if(x == x1) return x;
+
 
             if (iter % (int) MT.real()){
                 x = x1;
@@ -85,7 +74,7 @@ namespace anpi {
                 x = (x - (frac[iter / 10] * dx.real()));
             }
         }
-        std::cout << "fuck " <<x << std::endl;
+
         //Every so often we take a fractional step, to break any limit cycle (itself a rare occur-rence).
         return std::numeric_limits<T>::quiet_NaN();
     }

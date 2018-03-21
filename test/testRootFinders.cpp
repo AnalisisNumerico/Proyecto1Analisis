@@ -74,18 +74,19 @@ namespace anpi {
         /// Test the given a root finder
         template<typename T>
         void rootTest() {
-            //T eps=T(1)/T(10);
-            //std::vector<T> rootst1;
-            //anpi::mullerRoots(t1<T>(), T(0), rootst1,0,eps);
 
-            T eps=T(1)/T(10);
-            std::complex<T> sol = anpi::laguer(t1<T>(), std::complex<T>(0.0,0.0), eps);
+
+
+            /*
+            T eps=static_cast<T>(1.0e-7);
+            std::complex<T> x = (0.0,0.0);
+            std::complex<T> sol = anpi::laguer(t1<T>(), x, eps);
             std::cout << "Sol t1 "<< sol << std::endl;
-            sol = anpi::laguer(t2<T>(), std::complex<T>(0.0,0.0), eps);
+            sol = anpi::laguer(t2<T>(), x, eps);
             std::cout << "Sol t2 "<< sol << std::endl;
-            sol = anpi::laguer(t3<T>(), std::complex<T>(0.0,0.0), eps);
+            sol = anpi::laguer(t3<T>(), x, eps);
             std::cout << "Sol t3 "<< sol << std::endl;
-
+            */
 
             /*
             T eps=T(1)/T(10);
@@ -95,26 +96,26 @@ namespace anpi {
             std::cout << "Sol t2 "<< sol << std::endl;
             sol = anpi::Muller(t3<T>(), T(0), eps);
             std::cout << "Sol t3 "<< sol << std::endl;
+            */
 
             T valorTeoricot1 = T(1);
             T valorTeoricot2 = T(-1);
             T valorTeoricot3 = T(2);
 
             for (T eps=T(1)/T(10); eps>static_cast<T>(1.0e-7); eps/=T(10)) {
-
-                T sol = anpi::Muller(t1<T>(), T(0), eps);
-                //T sol = anpi::Muller(t1<T>(), std::complex<T>(0.0,0.0), eps);
-                T error = valorTeoricot1 - sol;
-                std::cout << "Sol t1 "<< sol << " eps "<< eps << std::endl;
-                std::cout << "err t1 "<< error << " eps "<< eps << std::endl;
+                std::complex<T> x = (0.0,0.0);
+                std::complex<T>  sol = anpi::Muller(t1<T>(), x, eps);
+                T error = valorTeoricot1 - sol.real();
                 BOOST_CHECK(error < eps);
-                sol = anpi::Muller(t2<T>(), T(0), eps);
-                error = valorTeoricot2 - sol;
-                //BOOST_CHECK(error<eps);
-                sol = anpi::Muller(t3<T>(), T(0), eps);
-                //error = valorTeoricot3 - sol;
+                x = (0.0,0.0);
+                sol = anpi::Muller(t2<T>(), x, eps);
+                error = valorTeoricot2 - sol.real();
                 BOOST_CHECK(error<eps);
-            }*/
+                x = (0.0,0.0);
+                sol = anpi::Muller(t3<T>(), x, eps);
+                error = valorTeoricot3 - sol.real();
+                BOOST_CHECK(error<eps);
+            }
 
         }
 
