@@ -9,7 +9,7 @@
  * @Date  : 10.03.2018
 */
 
-
+/*
 
 #include <boost/test/unit_test.hpp>
 #include <boost/math/tools/polynomial.hpp>
@@ -62,7 +62,7 @@ namespace anpi {
         template<typename T>
         void rootTest() {
 
-            /*
+
             T eps=T(1)/T(10);
             T sol = anpi::Muller(t1<T>, T(0), eps);
             std::cout << "Sol t1 "<< sol << std::endl;
@@ -70,7 +70,7 @@ namespace anpi {
             std::cout << "Sol t2 "<< sol << std::endl;
             sol = anpi::Muller(t3<T>, T(0), eps);
             std::cout << "Sol t3 "<< sol << std::endl;
-*/
+
             T valorTeoricot1 = T(1);
 
             for (T eps=T(1)/T(10); eps>static_cast<T>(1.0e-7); eps/=T(10)) {
@@ -111,7 +111,7 @@ namespace anpi {
                }
            }
        }*/
-
+/*
     } // test
 }  // anpi
 
@@ -150,4 +150,4 @@ BOOST_AUTO_TEST_SUITE( RootFinder )
         //anpi::test::rootTest<double>(anpi::laguerreRoots);
     }
 
-BOOST_AUTO_TEST_SUITE_END()
+BOOST_AUTO_TEST_SUITE_END()*/

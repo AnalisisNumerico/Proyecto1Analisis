@@ -88,6 +88,7 @@ BOOST_AUTO_TEST_SUITE( RootFinder )
         BOOST_CHECK(quotient[0] == 1);
         BOOST_CHECK(quotient[1] == 0);
         BOOST_CHECK(r[0] == 2);
+        
     }
 
 BOOST_AUTO_TEST_SUITE_END()

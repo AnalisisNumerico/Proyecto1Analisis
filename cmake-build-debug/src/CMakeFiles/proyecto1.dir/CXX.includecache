@@ -19,12 +19,6 @@ cstdlib
 -
 iostream
 -
-vector
--
-complex
--
-iomanip
--
 Deflate.hpp
 /home/jeanpaul/Code/c++/Proyecto1Analisis/src/Deflate.hpp
 Deflate2.hpp

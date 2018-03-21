@@ -1,0 +1,12 @@
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/CMakeFiles/rebuild_cache.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/CMakeFiles/test.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/CMakeFiles/edit_cache.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/src/CMakeFiles/edit_cache.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/src/CMakeFiles/test.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/src/CMakeFiles/anpi.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/src/CMakeFiles/rebuild_cache.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/src/CMakeFiles/proyecto1.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/test/CMakeFiles/rebuild_cache.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/test/CMakeFiles/edit_cache.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/test/CMakeFiles/tester.dir
+/home/jeanpaul/Code/c++/Proyecto1Analisis/cordero/test/CMakeFiles/test.dir

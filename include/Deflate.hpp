@@ -18,6 +18,26 @@ namespace anpi {
     polinomial::polynomial<T> deflate(const polinomial::polynomial<T>& poly,
                                       const T& root,
                                       polinomial::polynomial<T>& residuo) {
+        polinomial::polynomial<T> q = {{}};
+        q = poly;
+        int n = poly.degree();
+        T remanente = poly[n];
+        q[n] = T(0);
+
+        for(int i = n - 1; i >= 0; i--){
+            T swap = q[i];
+            q[i] = remanente;
+            remanente = swap + remanente * root;
+        }
+
+        residuo = poly;
+        residuo[0] = remanente;
+
+        for(int i = 1; i <= n; i++) {
+            residuo[i] = T(0);
+        }
+
+        return q;
 
 /*
         residuo = poly;
@@ -41,26 +61,7 @@ namespace anpi {
 
         return q;
 */
-        polinomial::polynomial<T> q = {{}};
-        q = poly;
-        int n = poly.degree();
-        T remanente = poly[n];
-        q[n] = T(0);
 
-        for(int i = n - 1; i >= 0; i--){
-            T swap = q[i];
-            q[i] = remanente;
-            remanente = swap + remanente * root;
-        }
-
-        residuo = poly;
-        residuo[0] = remanente;
-
-        for(int i = 1; i <= n; i++) {
-            residuo[i] = T(0);
-        }
-
-        return q;
     }
 }
 
