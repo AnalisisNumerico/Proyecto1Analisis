@@ -74,9 +74,19 @@ namespace anpi {
         /// Test the given a root finder
         template<typename T>
         void rootTest() {
+            //T eps=T(1)/T(10);
+            //std::vector<T> rootst1;
+            //anpi::mullerRoots(t1<T>(), T(0), rootst1,0,eps);
+
             T eps=T(1)/T(10);
-            std::vector<T> rootst1;
-            anpi::mullerRoots(t1<T>(), T(0), rootst1,0,eps);
+            std::complex<T> sol = anpi::laguer(t1<T>(), std::complex<T>(0.0,0.0), eps);
+            std::cout << "Sol t1 "<< sol << std::endl;
+            sol = anpi::laguer(t2<T>(), std::complex<T>(0.0,0.0), eps);
+            std::cout << "Sol t2 "<< sol << std::endl;
+            sol = anpi::laguer(t3<T>(), std::complex<T>(0.0,0.0), eps);
+            std::cout << "Sol t3 "<< sol << std::endl;
+
+
             /*
             T eps=T(1)/T(10);
             T sol = anpi::Muller(t1<T>(), T(0), eps);
