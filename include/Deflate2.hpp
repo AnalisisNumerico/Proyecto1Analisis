@@ -24,8 +24,7 @@ namespace anpi {
 
         T raiz2 = 2 * root.real();
 
-        T raiz1 = abs(root);
-        raiz1 *= raiz1;
+        T raiz1 = norm(root);
 
         for(int k = n - 2; k >= 0; k--) {
             q[k] = residuo[k + 2];

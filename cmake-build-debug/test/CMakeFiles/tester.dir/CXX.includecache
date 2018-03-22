@@ -59,8 +59,12 @@ boost/math/tools/polynomial.hpp
 -
 iostream
 -
+complex
+-
 Deflate.hpp
 /home/jeanpaul/Code/c++/Proyecto1Analisis/test/Deflate.hpp
+Deflate2.hpp
+/home/jeanpaul/Code/c++/Proyecto1Analisis/test/Deflate2.hpp
 
 /home/jeanpaul/Code/c++/Proyecto1Analisis/test/testMain.cpp
 boost/test/unit_test.hpp
