@@ -38,7 +38,9 @@ namespace anpi {
 
         template<typename T>
         boost::math::tools::polynomial<T> t1(){
-            boost::array<T, 5> const a = {{-18.0, 9.0,7.0, 1.0,1.0}};
+        //boost::math::tools::polynomial<std::complex<T>> t1(){
+
+                boost::array<T, 5> const a = {{-18.0, 9.0,7.0, 1.0,1.0}};
 
             boost::math::tools::polynomial<T> const t(a.begin(), 5); /// raices reales y complejas x=1,\:x=3i,\:x=-3i,\:x=-2
             return t;
@@ -46,10 +48,19 @@ namespace anpi {
 
 
         template<typename T>
+        boost::math::tools::polynomial<std::complex<T>> t11(){
+            boost::array<std::complex<T>, 5> const a = {{std::complex<T>(-18.0,0), std::complex<T>(9.0,0),std::complex<T>(7.0,0), std::complex<T>(1.0,0),std::complex<T>(1.0,0)}};
+            boost::math::tools::polynomial<T> const t(a.begin(), 5); /// raices reales y complejas x=1,\:x=3i,\:x=-3i,\:x=-2
+            return t;
+        }
+
+        template<typename T>
         /// Second testing function for roots (x+1)(x²-9)(x+4)
         ///x^4+3x^3-7x^2-27x-18
         boost::math::tools::polynomial<T> t2(){
-            boost::array<T, 5> const a = {{-18.0,-27.0,-7.0, 3.0,1.0}};
+        //boost::math::tools::polynomial<std::complex<T>> t2(){
+
+                boost::array<T, 5> const a = {{-18.0,-27.0,-7.0, 3.0,1.0}};
             boost::math::tools::polynomial<T> const t(a.begin(), 5); /// 4 raices reales x=-1,\:x=-2,\:x=-3,\:x=3
             return t;
         }
@@ -58,6 +69,7 @@ namespace anpi {
         /// Third testing function for roots (x-2)(x²+16)(x+9)
         ///x^4+7x^3-2x^2+112x-288
         boost::math::tools::polynomial<T> t3(){
+        //boost::math::tools::polynomial<std::complex<T>> t3(){
             boost::array<T, 5> const a = {{-288.0,112.0,-2.0, 7.0,1.0}};
 
             boost::math::tools::polynomial<T> const t(a.begin(), 5); /// raices reales y complejas x=2,\:x=4i,\:x=-4i,\:x=-9
@@ -76,6 +88,17 @@ namespace anpi {
         void rootTest() {
 
 
+            T eps=static_cast<T>(1.0e-7);
+            std::complex<T> x = (0.0,3.0);
+            std::complex<T> sol = anpi::laguer(t1<T>(), x, eps);
+            std::cout << "Sol t1 "<< sol << std::endl;
+
+            T eps1=T(1)/T(10);
+            std::complex<T> x1 = (0.0,0.0);
+            std::complex<T> sol1 = anpi::Muller(t11<T>(), x1, eps1);
+            std::cout << "Sol t1 "<< sol1 << std::endl;
+
+
 
             /*
             T eps=static_cast<T>(1.0e-7);
@@ -88,21 +111,24 @@ namespace anpi {
             std::cout << "Sol t3 "<< sol << std::endl;
             */
 
-            /*
+/*
             T eps=T(1)/T(10);
-            T sol = anpi::Muller(t1<T>(), T(0), eps);
+            std::complex<T> x = (0.0,0.0);
+            std::complex<T> sol = anpi::Muller(t1<T>(), x, eps);
             std::cout << "Sol t1 "<< sol << std::endl;
-            sol = anpi::Muller(t2<T>(), T(0), eps);
+            x = (0.0,0.0);
+            sol = anpi::Muller(t2<T>(), x, eps);
             std::cout << "Sol t2 "<< sol << std::endl;
-            sol = anpi::Muller(t3<T>(), T(0), eps);
+            x = (0.0,0.0);
+            sol = anpi::Muller(t3<T>(), x, eps);
             std::cout << "Sol t3 "<< sol << std::endl;
-            */
+*/
 
             T valorTeoricot1 = T(1);
             T valorTeoricot2 = T(-1);
             T valorTeoricot3 = T(2);
 
-            for (T eps=T(1)/T(10); eps>static_cast<T>(1.0e-7); eps/=T(10)) {
+            /*for (T eps=T(1)/T(10); eps>static_cast<T>(1.0e-7); eps/=T(10)) {
                 std::complex<T> x = (0.0,0.0);
                 std::complex<T>  sol = anpi::Muller(t1<T>(), x, eps);
                 T error = valorTeoricot1 - sol.real();
@@ -115,7 +141,7 @@ namespace anpi {
                 sol = anpi::Muller(t3<T>(), x, eps);
                 error = valorTeoricot3 - sol.real();
                 BOOST_CHECK(error<eps);
-            }
+            }*/
 
         }
 

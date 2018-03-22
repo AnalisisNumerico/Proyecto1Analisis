@@ -84,5 +84,52 @@ namespace anpi {
         }
         return std::numeric_limits<T>::quiet_NaN();
     }
+
+
+    /*template<typename T>
+    std::complex<T> rootInterpolation(const boost::math::tools::polynomial<std::complex<T>>& funct,std::complex<T> xl,std::complex<T> xu,const T eps) {
+
+        std::complex<T> xr=xl; //hay que iniciar con algo válido
+        std::complex<T> fl = funct.evaluate(xl);
+        std::complex<T> fu = funct.evaluate(xu);
+        T ea=T ( );
+        int iu (0), il (0); //contadores para detectar estancamientos
+
+
+
+        for(int i =std::numeric_limits<T>::digits; i > 0; --i) {
+            std::complex<T> xrold(xr); //para cálculo de error ///xrold es una funcion??? si lo es, poner el evaluate
+            xr=xu - fu * (xl-xu)/(fl - fu);
+            std::complex<T> fr =funct.evaluate(xr);
+//para evitar división por cero
+            if ( std::abs(xr) > eps ) {
+                ea = std::abs( ( xr-xrold) / xr) * T(100);
+            }
+            std::complex<T> cond= fl * fr; //cual intervalo tiene la raíz
+            if(std::abs(cond) < std::abs(std::complex<T>(0,0))) { //el lado izquierdo tiene la raíz
+                xu=xr;
+                fu= fr;
+                iu =0;
+                il ++;
+                if ( il >= 2) {
+                    fl /= T ( 2 ) ;
+                }
+            } else if ( std::abs(cond) < std::abs(std::complex<T>(0,0)) ) {//el lado derecho tiene la raíz
+                xl = xr;
+                fl = fr;
+                il =0;
+                iu ++;
+                if (iu >=2) {
+                    fu /= 2;
+                }
+            } else {
+                ea = T(0); //no hay error
+                xr = (fl == T(0)) ? xl : xu;
+            }if ( ea < eps ){ //si se alcanzó precisión, termine
+                return xr;
+            }
+        }
+        return std::numeric_limits<T>::quiet_NaN();
+    }*/
 }
 #endif

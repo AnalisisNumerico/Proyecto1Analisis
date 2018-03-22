@@ -74,7 +74,6 @@ namespace anpi {
                 x = (x - (frac[iter / 10] * dx.real()));
             }
         }
-
         //Every so often we take a fractional step, to break any limit cycle (itself a rare occur-rence).
         return std::numeric_limits<T>::quiet_NaN();
     }
